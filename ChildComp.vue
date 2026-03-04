@@ -1,14 +1,56 @@
 <script setup>
-// TODO 1 — Props : déclarer la prop 'msg' de type String avec defineProps()
+// TODO 2 — Déclarer la prop 'msg' (type String) avec defineProps()
 
 
-// TODO 2 — Emits : déclarer et émettre l'événement 'response' avec defineEmits()
+// TODO 3 — Déclarer l'événement 'reponse' avec defineEmits()
 
 </script>
 
 <template>
-  <!-- TODO 1 — Props : afficher {{ msg }} au lieu du texte statique -->
-  <p>Un composant enfant !</p>
+  <div class="child">
+    <!-- 1. Composant de base -->
+    <p>Je suis le composant enfant !</p>
 
-  <!-- TODO 3 — Slots : ajouter un <slot> avec un contenu de secours -->
+    <!-- TODO 2 — Afficher la prop msg (avec v-if) -->
+
+    <!-- TODO 3 — Ajouter un bouton qui émet 'reponse' au clic -->
+
+    <!-- TODO 4 — Ajouter un <slot /> pour le contenu du parent -->
+  </div>
 </template>
+
+<style scoped>
+.child {
+  border: 2px solid #42b883;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(66, 184, 131, 0.15);
+}
+
+.child p {
+  margin: 0;
+  color: #35495e;
+}
+
+.prop {
+  margin-top: 8px !important;
+  color: #2980b9 !important;
+  font-style: italic;
+}
+
+button {
+  margin-top: 10px;
+  padding: 6px 14px;
+  background: #42b883;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+button:hover {
+  background: #38a373;
+}
+</style>
