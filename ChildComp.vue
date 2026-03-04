@@ -1,14 +1,18 @@
 <script setup>
-// TODO 1 — Props : déclarer la prop 'msg' de type String avec defineProps()
+// 1 — Props : déclarer la prop msg reçue du parent
+defineProps({
+  msg: String
+})
 
-
-// TODO 2 — Emits : déclarer et émettre l'événement 'response' avec defineEmits()
-
+// 2 — Emits : déclarer et émettre l'événement response
+const emit = defineEmits(['response'])
+emit('response', "hello de l'enfant")
 </script>
 
 <template>
-  <!-- TODO 1 — Props : afficher {{ msg }} au lieu du texte statique -->
-  <p>Un composant enfant !</p>
+  <!-- 1 — Props : afficher la prop msg -->
+  <p>{{ msg }}</p>
 
-  <!-- TODO 3 — Slots : ajouter un <slot> avec un contenu de secours -->
+  <!-- 3 — Slots : emplacement pour le contenu du parent -->
+  <slot>Contenu de secours</slot>
 </template>
